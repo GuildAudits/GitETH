@@ -4,6 +4,17 @@ import tether from "../../../assets/icons/tether.svg";
 import discordIcon from "../../../assets/icons/discordIcon.svg";
 import CustomText from "./CustomText";
 
+/**
+ * JoinCommunity component.
+ *
+ * This component renders a section encouraging users to join the community.
+ * It includes a title, a brief description, and a call-to-action button
+ * that links to the community's Discord server.
+ * 
+ * The component is styled with decorative background elements and is responsive.
+ *
+ * @returns {JSX.Element} The component JSX
+ */
 export default function JoinCommunity() {
   return (
     <section className="relative mx-auto max-w-7xl px-4 py-24">

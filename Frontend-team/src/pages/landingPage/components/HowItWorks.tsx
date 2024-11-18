@@ -7,6 +7,18 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import diamond from "../../../assets/icons/diamond.png";
 import logo from "../../../assets/icons/EthOpenSource.svg";
 import CustomBtn from "@/components/CustomBtn";
+
+
+/**
+ * HowItWorks component.
+ *
+ * This component renders a section on the landing page that explains how the platform works.
+ * It includes a brief overview of the platform, a sign up form, and a call to action button.
+ *
+ * The component is responsive and scales according to the screen size.
+ *
+ * @returns {JSX.Element} The component JSX
+ */
 export default function HowItWorks() {
   const h = () => {
     console.log("object")

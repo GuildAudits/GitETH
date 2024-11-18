@@ -9,6 +9,15 @@ import glassMan from "../../../assets/images/manGlass.png";
 import coding from "../../../assets/images/coding.png";
 import defi from "../../../assets/images/defi.png";
 
+  /**
+   * ProjectCategories component.
+   *
+   * This component renders a section on the landing page that allows users to explore different project categories.
+   * It includes a title, a description, and a call-to-action button to connect to GitHub.
+   * The component is responsive and scales according to the screen size.
+   *
+   * @returns {JSX.Element} The component JSX
+   */
 export default function ProjectCategories() {
 
 

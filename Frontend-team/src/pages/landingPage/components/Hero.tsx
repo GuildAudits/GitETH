@@ -4,6 +4,14 @@ import tetherIcon from "../../../assets/icons/tether.svg";
 import CustomBtn from "@/components/CustomBtn";
 import githubIcon from "../../../assets/icons/githubIcon.png"
 import CustomText from "./CustomText";
+
+/**
+ * The Hero component is the main section of the landing page. It contains a title, a description, and a call to action button to login with Github.
+ *
+ * The component is fully responsive and has a few animations to make it visually appealing.
+ *
+ * The component also includes a few decorative elements to make the page more visually appealing.
+ */
 export default function Hero() {
   return (
     <section className="relative mx-auto max-w-7xl px-4 py-24 mb-32">

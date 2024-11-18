@@ -6,6 +6,16 @@ import womanLaptop from "../../../assets/images/womanLaptop.png";
 import CustomText from "./CustomText";
 import diamond from "../../../assets/icons/diamond.png"
 
+/**
+ * WhyChooseUs component.
+ *
+ * This component renders a section showcasing the benefits of using Eth Open Source.
+ * It renders a brief overview, a list of benefits, and a call-to-action button.
+ *
+ * The component is responsive and scales according to the screen size.
+ *
+ * @returns {JSX.Element} The component JSX
+ */
 export default function WhyChooseUs() {
   const benefits = [
     {
