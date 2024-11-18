@@ -1,8 +1,4 @@
-import { Button } from '@/components/ui/button';
-import { decrement, increment, RootState } from '@/store';
-import React from 'react'
-import { useDispatch, useSelector } from 'react-redux';
-import Navbar from '@/components/Navbar';
+
 import Hero from './components/Hero';
 import FeaturedProjects from './components/FeaturedProjects';
 import HowItWorks from './components/HowItWorks';
@@ -10,9 +6,22 @@ import WhyChooseUs from './components/WhyChooseUs';
 import ProjectCategories from './components/ProjectCategories';
 import JoinCommunity from './components/JoinCommunity';
 import EmpowerProject from './components/EmpowerProject';
-function LandingPage() {
+/**
+ * LandingPage component.
+ *
+ * This component serves as the main landing page of the application. 
+ * It includes several sections to engage the user, such as the Hero section,
+ * Featured Projects, How It Works, Why Choose Us, Empower Project, 
+ * Project Categories, and Join Community.
+ *
+ * The component is structured with a set of nested components for 
+ * organized content presentation. It also contains provisions for 
+ * decorative background blurs to enhance visual appeal.
+ *
+ * @returns {JSX.Element} The complete landing page layout
+ */
 
-  
+function LandingPage() {
     return (
       <div className="">
         {/* Background Blurs */}

@@ -1,5 +1,4 @@
-import { Button } from "flowbite-react";
-import { FaGithub, FaDiscord, FaTwitter } from "react-icons/fa";
+
 import logo from "../assets/icons/EthOpenSource.svg";
 import instagramIcon from "../assets/icons/instagram.svg";
 import xIcon from "../assets/icons/xIcon.svg";

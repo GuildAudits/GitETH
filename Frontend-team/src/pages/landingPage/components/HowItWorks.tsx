@@ -1,4 +1,3 @@
-import { Button, Timeline } from "flowbite-react";
 import featureIcon from "../../../assets/icons/feature.svg";
 import googleIcon from "../../../assets/icons/googleIcon.svg";
 import gitHubIcon from "../../../assets/icons/githubIcon.svg";
@@ -68,7 +67,7 @@ export default function HowItWorks() {
             <TabsContent value="step2" className="w-full">Step 2</TabsContent>
             <TabsContent value="step3" className="w-full">Step 3</TabsContent>
             <div className="absolute top-20  right-[50%] -z-10">
-              <img src={diamond} alt="" className=" w-56 blur-sm animate-pulse animate-float-slow" />
+              <img src={diamond} alt="" className=" w-56 blur-sm animate-pulse" />
             </div>
           </Tabs>
 

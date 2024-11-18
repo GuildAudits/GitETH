@@ -1,4 +1,3 @@
-import { Button } from "flowbite-react";
 import ethIcon from "../../../assets/icons/eth.svg";
 import tetherIcon from "../../../assets/icons/tether.svg";
 import CustomBtn from "@/components/CustomBtn";
