@@ -1,6 +1,5 @@
 import {  Navbar } from 'flowbite-react';
 import { useState } from 'react';
-import { Button } from './ui/button';
 import CustomBtn from './CustomBtn';
 // import { DarkThemeToggle } from 'flowbite-react';
 
