@@ -32,7 +32,7 @@ function LandingPage() {
         </div> */}
         
         {/* Content */}
-        <div className="relative z-10 mt-56">
+        <div className="relative z-10 mt-24 md:mt-56">
           <Hero />
           <FeaturedProjects />
           <HowItWorks />
