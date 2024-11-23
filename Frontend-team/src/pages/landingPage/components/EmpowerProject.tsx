@@ -7,6 +7,7 @@ import CustomText from "./CustomText";
 import diamond from "../../../assets/icons/diamond.png";
 import framem2 from "../../../assets/images/Framem22.svg";
 import framem3 from "../../../assets/images/Framem3.svg";
+import { useState } from "react";
 
 interface Category {
   title: string;
@@ -42,39 +43,56 @@ const categories: Category[] = [
  * The section also includes a floating diamond icon that adds a touch of visual interest.
  */
 export default function EmpowerProject() {
+  const [index, setIndex] = useState(0);
+
+  const handleNext = () => {
+    if (index === categories.length - 1) {
+      setIndex(0)
+    } else {
+      setIndex(index + 1)
+    }
+  }
+  const handlePrev = () => {
+    if (index === 0) {
+      setIndex(categories.length - 1)
+    } else {
+      setIndex(index - 1)
+    }
+  }
   return (
     <section className="mx-auto max-w-7xl px-4 py-16 relative max-sm:pb-0">
       <div className="h-full">
-        {categories.map((category, id) => (
-          <div key={id} className="mb-16">
+        {
+          <div  className="mb-16">
             <div className="flex items-center flex-wrap">
               <div className="md:w-[50%] h-full mb-12 max-sm:mb-0 max-sm:w-[345px] max-sm:mx-auto">
                 <span className="text-sm mb-5 font-normal py-2 px-4 border-border border rounded-3xl max-sm:text-sm max-sm:font-normal ">
-                  {category.tag}
+                  {categories[index].tag}
                 </span>
-                <CustomText text={category.title} style="font-medium text-5xl max-sm:mb-2 my-7 max-sm:text-2xl max-sm:font-medium max-sm:text-center" />
-                <p className="text-lg font-normal text-grayBlue max-sm:hidden">{category.desc}</p>
+                <CustomText text={categories[index].title} style="font-medium text-5xl max-sm:mb-2 my-7 max-sm:text-2xl max-sm:font-medium max-sm:text-center" />
+                <p className="text-lg font-normal text-grayBlue max-sm:hidden">{categories[index].desc}</p>
                 <p className="sm:hidden text-grayBlue max-sm:text-[10px] max-sm:text-center">Build the future of dApps, DAOs, and digital assets on Ethereum with the support of Eth Open Source. </p>
               </div>
               <div className="md:w-[50%]">
-                <img src={category.image} alt={category.title} className="w-full max-sm:hidden" />
-                <img src={category.image2} alt={category.title} className="w-full sm:hidden" />
+                <img src={categories[index].image} alt={categories[index].title} className="w-full max-sm:hidden" />
+                <img src={categories[index].image2} alt={categories[index].title} className="w-full sm:hidden" />
               </div>
             </div>
             <div
-              className={`flex my-7 max-sm:my-0 ${
-                id % 2 !== 0 ? "justify-end" : "justify-start"
+              className={`flex my-7 max-sm:my-0 relative ${
+                index % 2 !== 0 ? "justify-end max-sm:justify-center" : "justify-start max-sm:justify-center"
               }`}
             >
               <CustomBtn
                 text=""
                 colored="yes"
-                icon={id % 2 === 0 ? arrowLeftIcon : arrowRightIcon}
-                style="w-[72px] h-[72px] max-sm:hidden"
+                icon={index % 2 === 0 ? arrowLeftIcon : arrowRightIcon}
+                style="w-[72px] h-[72px] max-sm:w-12 max-sm:h-12 max-sm:absolute max-sm:-top-[110px]"
+                onClick={index % 2 === 0 ? handlePrev : handleNext}
               />
             </div>
           </div>
-        ))}
+        }
       </div>
       <div className="absolute top-20 right-[50%] -z-10">
         <img

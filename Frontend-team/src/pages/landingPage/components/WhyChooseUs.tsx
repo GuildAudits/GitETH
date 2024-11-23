@@ -7,6 +7,7 @@ import womanLaptMobile from "../../../assets/images/image20.png"
 import womanLaptopMobile from "../../../assets/images/Framem1.svg"
 import CustomText from "./CustomText";
 import diamond from "../../../assets/icons/diamond.png"
+import { useState } from "react";
 
 /**
  * WhyChooseUs component.
@@ -18,7 +19,11 @@ import diamond from "../../../assets/icons/diamond.png"
  *
  * @returns {JSX.Element} The component JSX
  */
+
 export default function WhyChooseUs() {
+
+  const [index, setIndex] = useState(0)
+
   const benefits = [
     {
       icon: teamIcon,
@@ -36,6 +41,8 @@ export default function WhyChooseUs() {
       description: "Access learning resources, mentorship programs, and growth opportunities.",
     },
   ];
+
+ 
 
   return (
     <section className="mx-auto max-w-7xl px-4 py-16 ">
@@ -63,9 +70,9 @@ export default function WhyChooseUs() {
           <img src={diamond} alt="" className=" w-56 blur-lg animate-float-slow" />
         </div>
       </div>
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center sm:hidden">
         <CustomText style={"text-3xl mb-8 font-bold leading-tight md:text-5xl max-sm:text-2xl max-sm:font-medium"} text="Why Choose Us" />
-        <div className="sm:hidden flex relative border border-border rounded-3xl p-3 max-sm:py-9  ">
+        <div className="flex relative border border-border rounded-3xl p-3 max-sm:py-9  ">
           <div className="flex-1 ml-3">{benefits.map((benefit, id) => (
             <div className="flex mb-5 items-start gap-5" key={id}>
               <img src={benefit.icon} alt="" className="w-14 max-sm:w-9 absolute -left-5" />

@@ -1,9 +1,10 @@
 // import './App.css'
-import { Route, Routes } from "react-router-dom";
+import { Outlet, Route, Routes } from "react-router-dom";
 import LandingPage from "./pages/landingPage";
 import MainApp from "./pages/mainApp";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
+import Onboarding from "./pages/onBoarding";
   /**
    * App component renders the main application layout.
    *
@@ -17,13 +18,20 @@ import Navbar from "./components/Navbar";
 
 function App() {
   return (
-    <div className="min-h-screen bg-dark-gradient text-white relative overflow-hidden">
-      <Navbar />
-      <Routes>
-        <Route element={<LandingPage/>} path="/"/>
-        <Route element={<MainApp/>} path="/app"/>
+    <div className="min-h-screen bg-dark-gradient text-white relative overflow-hidden flex flex-col justify-between">
+      {/* <Navbar /> */}
+      <Routes >
+        <Route path="/" element={<MainApp/>}>
+          <Route index element={<LandingPage />} />
+          <Route path="/contributors" element={<h1>Contributors</h1>} />
+          <Route path="/projects" element={<h1>Projects</h1>} />
+          <Route path="/rewards" element={<h1>Rewards</h1>} />
+          <Route path="/community" element={<h1>Community</h1>} />
+        </Route>
+        {/* <Route element={<MainApp/>} path="/app" /> */}
+        <Route element={<Onboarding/>} path="/onboarding"/>
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
 
     </div>
   )
