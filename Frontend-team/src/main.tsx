@@ -9,9 +9,11 @@ import { store } from './store/index.ts'
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <Provider store={store}>
+      {/* <div className="min-h-screen bg-dark"> */}
       <BrowserRouter>
         <App />
       </BrowserRouter>
+      {/* </div> */}
     </Provider>
   </StrictMode>,
 )
